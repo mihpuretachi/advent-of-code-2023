@@ -12,7 +12,7 @@
         const response = await fetch('src/challenges/day-07/source.txt');
         const text = await response.text();
         const items = text.split('\r\n');
-        // partOneResult = new CamelCardsGame(items, false).calculateTotalWinning();
+        partOneResult = new CamelCardsGame(items, false).calculateTotalWinning();
         partTwoResult = new CamelCardsGame(items, true).calculateTotalWinning();
     };
 

@@ -14,7 +14,7 @@
         const text = await response.text();
         const items = text.split('\r\n');
         const navigator = new Navigator(items);
-        // partOneResult = navigator.calculateStepsForHumans("AAA", "ZZZ");
+        partOneResult = navigator.calculateStepsForHumans("AAA", "ZZZ");
         partTwoResult = navigator.calculateStepsForGhosts();
     };
 
