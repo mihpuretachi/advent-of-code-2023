@@ -127,8 +127,8 @@
 
             // Handles range before stage
             if (locationRange.rangeStart < this.sourceRangeStart) {
-                const rangeBeforeStageStart = Math.min(locationRange.rangeStart, this.sourceRangeStart);
-                const rangeBeforeStageEnd = Math.min(this.sourceRangeStart, locationRange.rangeEnd);
+                const rangeBeforeStageStart = Math.min(locationRange.rangeStart, this.sourceRangeStart - 1);
+                const rangeBeforeStageEnd = Math.min(this.sourceRangeStart - 1, locationRange.rangeEnd);
                 const rangeBeforeStageQuantity = rangeBeforeStageEnd - rangeBeforeStageStart + 1;
                 const newLocationRange = new LocationRange(rangeBeforeStageStart, rangeBeforeStageQuantity);
                 destinations.push(newLocationRange);
@@ -136,8 +136,8 @@
 
             // Handles range after stage
             if (locationRange.rangeEnd > this.sourceRangeEnd) {
-                const rangeAfterStageStart = Math.max(this.sourceRangeEnd, locationRange.rangeStart);
-                const rangeAfterStageEnd = Math.max(this.sourceRangeEnd, locationRange.rangeEnd);
+                const rangeAfterStageStart = Math.max(this.sourceRangeEnd + 1, locationRange.rangeStart);
+                const rangeAfterStageEnd = Math.max(this.sourceRangeEnd + 1, locationRange.rangeEnd);
                 const rangeAfterStageQuantity = rangeAfterStageEnd - rangeAfterStageStart + 1;
                 const newLocationRange = new LocationRange(rangeAfterStageStart, rangeAfterStageQuantity);
                 destinations.push(newLocationRange);
