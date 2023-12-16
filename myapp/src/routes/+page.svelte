@@ -1,5 +1,5 @@
 <script>
-    import Day11 from "../challenges/day-11/Day11.svelte";
+    import Day15 from "../challenges/day-15/Day15.svelte";
 </script>
 
-<Day11></Day11>
+<Day15></Day15>
